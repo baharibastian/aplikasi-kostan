@@ -32,24 +32,25 @@ Partial Class PenghuniForm
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.txtKode = New System.Windows.Forms.TextBox()
+        Me.txtNo = New System.Windows.Forms.TextBox()
+        Me.txtNamaLengkap = New System.Windows.Forms.TextBox()
+        Me.txtAlamatAsal = New System.Windows.Forms.TextBox()
+        Me.txtKota = New System.Windows.Forms.TextBox()
+        Me.txtTelepon = New System.Windows.Forms.TextBox()
+        Me.cmbJK = New System.Windows.Forms.ComboBox()
+        Me.tglLahir = New System.Windows.Forms.DateTimePicker()
+        Me.txtPekerjaan = New System.Windows.Forms.TextBox()
+        Me.txtAlamatPekerjaan = New System.Windows.Forms.TextBox()
+        Me.cmdSimpan = New System.Windows.Forms.Button()
+        Me.cmdBatal = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmdCari = New System.Windows.Forms.Button()
+        Me.txtCariNama = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -142,109 +143,101 @@ Partial Class PenghuniForm
         Me.Label10.TabIndex = 9
         Me.Label10.Text = "Alamat Pekerjaan"
         '
-        'TextBox1
+        'txtKode
         '
-        Me.TextBox1.Location = New System.Drawing.Point(124, 10)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(198, 20)
-        Me.TextBox1.TabIndex = 10
+        Me.txtKode.Location = New System.Drawing.Point(124, 10)
+        Me.txtKode.Name = "txtKode"
+        Me.txtKode.Size = New System.Drawing.Size(198, 20)
+        Me.txtKode.TabIndex = 10
         '
-        'TextBox2
+        'txtNo
         '
-        Me.TextBox2.Location = New System.Drawing.Point(124, 36)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(198, 20)
-        Me.TextBox2.TabIndex = 11
+        Me.txtNo.Location = New System.Drawing.Point(124, 36)
+        Me.txtNo.Name = "txtNo"
+        Me.txtNo.Size = New System.Drawing.Size(198, 20)
+        Me.txtNo.TabIndex = 11
         '
-        'TextBox3
+        'txtNamaLengkap
         '
-        Me.TextBox3.Location = New System.Drawing.Point(124, 62)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(198, 20)
-        Me.TextBox3.TabIndex = 12
+        Me.txtNamaLengkap.Location = New System.Drawing.Point(124, 62)
+        Me.txtNamaLengkap.Name = "txtNamaLengkap"
+        Me.txtNamaLengkap.Size = New System.Drawing.Size(198, 20)
+        Me.txtNamaLengkap.TabIndex = 12
         '
-        'TextBox4
+        'txtAlamatAsal
         '
-        Me.TextBox4.Location = New System.Drawing.Point(124, 89)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(198, 63)
-        Me.TextBox4.TabIndex = 13
+        Me.txtAlamatAsal.Location = New System.Drawing.Point(124, 89)
+        Me.txtAlamatAsal.Multiline = True
+        Me.txtAlamatAsal.Name = "txtAlamatAsal"
+        Me.txtAlamatAsal.Size = New System.Drawing.Size(198, 63)
+        Me.txtAlamatAsal.TabIndex = 13
         '
-        'TextBox5
+        'txtKota
         '
-        Me.TextBox5.Location = New System.Drawing.Point(124, 159)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(198, 20)
-        Me.TextBox5.TabIndex = 14
+        Me.txtKota.Location = New System.Drawing.Point(124, 159)
+        Me.txtKota.Name = "txtKota"
+        Me.txtKota.Size = New System.Drawing.Size(198, 20)
+        Me.txtKota.TabIndex = 14
         '
-        'TextBox6
+        'txtTelepon
         '
-        Me.TextBox6.Location = New System.Drawing.Point(124, 185)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(198, 20)
-        Me.TextBox6.TabIndex = 15
+        Me.txtTelepon.Location = New System.Drawing.Point(124, 185)
+        Me.txtTelepon.Name = "txtTelepon"
+        Me.txtTelepon.Size = New System.Drawing.Size(198, 20)
+        Me.txtTelepon.TabIndex = 15
         '
-        'ComboBox1
+        'cmbJK
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(124, 212)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(198, 21)
-        Me.ComboBox1.TabIndex = 16
+        Me.cmbJK.FormattingEnabled = True
+        Me.cmbJK.Location = New System.Drawing.Point(124, 212)
+        Me.cmbJK.Name = "cmbJK"
+        Me.cmbJK.Size = New System.Drawing.Size(198, 21)
+        Me.cmbJK.TabIndex = 16
         '
-        'DateTimePicker1
+        'tglLahir
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(124, 240)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(198, 20)
-        Me.DateTimePicker1.TabIndex = 17
+        Me.tglLahir.Location = New System.Drawing.Point(124, 240)
+        Me.tglLahir.Name = "tglLahir"
+        Me.tglLahir.Size = New System.Drawing.Size(198, 20)
+        Me.tglLahir.TabIndex = 17
         '
-        'TextBox7
+        'txtPekerjaan
         '
-        Me.TextBox7.Location = New System.Drawing.Point(124, 267)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(198, 20)
-        Me.TextBox7.TabIndex = 18
+        Me.txtPekerjaan.Location = New System.Drawing.Point(124, 267)
+        Me.txtPekerjaan.Name = "txtPekerjaan"
+        Me.txtPekerjaan.Size = New System.Drawing.Size(198, 20)
+        Me.txtPekerjaan.TabIndex = 18
         '
-        'TextBox8
+        'txtAlamatPekerjaan
         '
-        Me.TextBox8.Location = New System.Drawing.Point(124, 294)
-        Me.TextBox8.Multiline = True
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(198, 62)
-        Me.TextBox8.TabIndex = 19
+        Me.txtAlamatPekerjaan.Location = New System.Drawing.Point(124, 294)
+        Me.txtAlamatPekerjaan.Multiline = True
+        Me.txtAlamatPekerjaan.Name = "txtAlamatPekerjaan"
+        Me.txtAlamatPekerjaan.Size = New System.Drawing.Size(198, 62)
+        Me.txtAlamatPekerjaan.TabIndex = 19
         '
-        'Button1
+        'cmdSimpan
         '
-        Me.Button1.Location = New System.Drawing.Point(124, 363)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 20
-        Me.Button1.Text = "&Simpan"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmdSimpan.Location = New System.Drawing.Point(124, 363)
+        Me.cmdSimpan.Name = "cmdSimpan"
+        Me.cmdSimpan.Size = New System.Drawing.Size(75, 23)
+        Me.cmdSimpan.TabIndex = 20
+        Me.cmdSimpan.Text = "&Simpan"
+        Me.cmdSimpan.UseVisualStyleBackColor = True
         '
-        'Button2
+        'cmdBatal
         '
-        Me.Button2.Location = New System.Drawing.Point(206, 363)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "&Batal"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'ListView1
-        '
-        Me.ListView1.Location = New System.Drawing.Point(355, 102)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(285, 284)
-        Me.ListView1.TabIndex = 22
-        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.cmdBatal.Location = New System.Drawing.Point(206, 363)
+        Me.cmdBatal.Name = "cmdBatal"
+        Me.cmdBatal.Size = New System.Drawing.Size(75, 23)
+        Me.cmdBatal.TabIndex = 21
+        Me.cmdBatal.Text = "&Batal"
+        Me.cmdBatal.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Controls.Add(Me.TextBox9)
+        Me.GroupBox1.Controls.Add(Me.cmdCari)
+        Me.GroupBox1.Controls.Add(Me.txtCariNama)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Location = New System.Drawing.Point(355, 8)
         Me.GroupBox1.Name = "GroupBox1"
@@ -252,6 +245,22 @@ Partial Class PenghuniForm
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cari Data Penghuni"
+        '
+        'cmdCari
+        '
+        Me.cmdCari.Location = New System.Drawing.Point(122, 49)
+        Me.cmdCari.Name = "cmdCari"
+        Me.cmdCari.Size = New System.Drawing.Size(75, 23)
+        Me.cmdCari.TabIndex = 2
+        Me.cmdCari.Text = "&Cari"
+        Me.cmdCari.UseVisualStyleBackColor = True
+        '
+        'txtCariNama
+        '
+        Me.txtCariNama.Location = New System.Drawing.Point(122, 23)
+        Me.txtCariNama.Name = "txtCariNama"
+        Me.txtCariNama.Size = New System.Drawing.Size(157, 20)
+        Me.txtCariNama.TabIndex = 1
         '
         'Label11
         '
@@ -262,41 +271,33 @@ Partial Class PenghuniForm
         Me.Label11.TabIndex = 0
         Me.Label11.Text = "Nama Penghuni "
         '
-        'TextBox9
+        'DataGridView1
         '
-        Me.TextBox9.Location = New System.Drawing.Point(122, 23)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox9.TabIndex = 1
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(122, 49)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "&Cari"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(16, 403)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(618, 159)
+        Me.DataGridView1.TabIndex = 24
         '
         'PenghuniForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(652, 401)
+        Me.ClientSize = New System.Drawing.Size(652, 574)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.ListView1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.cmdBatal)
+        Me.Controls.Add(Me.cmdSimpan)
+        Me.Controls.Add(Me.txtAlamatPekerjaan)
+        Me.Controls.Add(Me.txtPekerjaan)
+        Me.Controls.Add(Me.tglLahir)
+        Me.Controls.Add(Me.cmbJK)
+        Me.Controls.Add(Me.txtTelepon)
+        Me.Controls.Add(Me.txtKota)
+        Me.Controls.Add(Me.txtAlamatAsal)
+        Me.Controls.Add(Me.txtNamaLengkap)
+        Me.Controls.Add(Me.txtNo)
+        Me.Controls.Add(Me.txtKode)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
@@ -312,6 +313,7 @@ Partial Class PenghuniForm
         Me.Text = "Data Penghuni"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -327,21 +329,21 @@ Partial Class PenghuniForm
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents txtKode As TextBox
+    Friend WithEvents txtNo As TextBox
+    Friend WithEvents txtNamaLengkap As TextBox
+    Friend WithEvents txtAlamatAsal As TextBox
+    Friend WithEvents txtKota As TextBox
+    Friend WithEvents txtTelepon As TextBox
+    Friend WithEvents cmbJK As ComboBox
+    Friend WithEvents tglLahir As DateTimePicker
+    Friend WithEvents txtPekerjaan As TextBox
+    Friend WithEvents txtAlamatPekerjaan As TextBox
+    Friend WithEvents cmdSimpan As Button
+    Friend WithEvents cmdBatal As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents cmdCari As Button
+    Friend WithEvents txtCariNama As TextBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

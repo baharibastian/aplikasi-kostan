@@ -13,3 +13,4 @@ D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.PenghuniForm.resources
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\bin\Debug\AplikasiKostan.exe.config
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\bin\Debug\MySql.Data.xml
+D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.TransaksiForm.resources

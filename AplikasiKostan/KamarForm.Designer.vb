@@ -25,15 +25,18 @@ Partial Class KamarForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtNoKamar = New System.Windows.Forms.TextBox()
+        Me.txtNamaKamar = New System.Windows.Forms.TextBox()
+        Me.txtHargaKamar = New System.Windows.Forms.TextBox()
+        Me.cmdSimpan = New System.Windows.Forms.Button()
+        Me.cmdBatal = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtCariKamar = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cmbStatus = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,62 +68,62 @@ Partial Class KamarForm
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Harga Kamar"
         '
-        'TextBox1
+        'txtNoKamar
         '
-        Me.TextBox1.Location = New System.Drawing.Point(95, 10)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox1.TabIndex = 3
+        Me.txtNoKamar.Location = New System.Drawing.Point(95, 10)
+        Me.txtNoKamar.Name = "txtNoKamar"
+        Me.txtNoKamar.Size = New System.Drawing.Size(157, 20)
+        Me.txtNoKamar.TabIndex = 3
         '
-        'TextBox2
+        'txtNamaKamar
         '
-        Me.TextBox2.Location = New System.Drawing.Point(95, 36)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.txtNamaKamar.Location = New System.Drawing.Point(95, 36)
+        Me.txtNamaKamar.Name = "txtNamaKamar"
+        Me.txtNamaKamar.Size = New System.Drawing.Size(157, 20)
+        Me.txtNamaKamar.TabIndex = 4
         '
-        'TextBox3
+        'txtHargaKamar
         '
-        Me.TextBox3.Location = New System.Drawing.Point(95, 62)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(157, 20)
-        Me.TextBox3.TabIndex = 5
+        Me.txtHargaKamar.Location = New System.Drawing.Point(95, 62)
+        Me.txtHargaKamar.Name = "txtHargaKamar"
+        Me.txtHargaKamar.Size = New System.Drawing.Size(157, 20)
+        Me.txtHargaKamar.TabIndex = 5
         '
-        'Button1
+        'cmdSimpan
         '
-        Me.Button1.Location = New System.Drawing.Point(95, 88)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "&Simpan"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.cmdSimpan.Location = New System.Drawing.Point(95, 116)
+        Me.cmdSimpan.Name = "cmdSimpan"
+        Me.cmdSimpan.Size = New System.Drawing.Size(75, 23)
+        Me.cmdSimpan.TabIndex = 6
+        Me.cmdSimpan.Text = "&Simpan"
+        Me.cmdSimpan.UseVisualStyleBackColor = True
         '
-        'Button2
+        'cmdBatal
         '
-        Me.Button2.Location = New System.Drawing.Point(177, 88)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 7
-        Me.Button2.Text = "&Batal"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.cmdBatal.Location = New System.Drawing.Point(177, 116)
+        Me.cmdBatal.Name = "cmdBatal"
+        Me.cmdBatal.Size = New System.Drawing.Size(75, 23)
+        Me.cmdBatal.TabIndex = 7
+        Me.cmdBatal.Text = "&Batal"
+        Me.cmdBatal.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.txtCariKamar)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 125)
+        Me.GroupBox1.Location = New System.Drawing.Point(277, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(236, 68)
+        Me.GroupBox1.Size = New System.Drawing.Size(205, 68)
         Me.GroupBox1.TabIndex = 8
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cari Kamar"
         '
-        'TextBox4
+        'txtCariKamar
         '
-        Me.TextBox4.Location = New System.Drawing.Point(79, 27)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox4.TabIndex = 1
+        Me.txtCariKamar.Location = New System.Drawing.Point(79, 27)
+        Me.txtCariKamar.Name = "txtCariKamar"
+        Me.txtCariKamar.Size = New System.Drawing.Size(113, 20)
+        Me.txtCariKamar.TabIndex = 1
         '
         'Label4
         '
@@ -134,23 +137,53 @@ Partial Class KamarForm
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(270, 10)
+        Me.DataGridView1.Location = New System.Drawing.Point(15, 156)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(285, 182)
+        Me.DataGridView1.Size = New System.Drawing.Size(467, 182)
         Me.DataGridView1.TabIndex = 9
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(13, 88)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(70, 13)
+        Me.Label5.TabIndex = 10
+        Me.Label5.Text = "Status Kamar"
+        '
+        'cmbStatus
+        '
+        Me.cmbStatus.FormattingEnabled = True
+        Me.cmbStatus.Items.AddRange(New Object() {"Kosong", "Berisi"})
+        Me.cmbStatus.Location = New System.Drawing.Point(95, 89)
+        Me.cmbStatus.Name = "cmbStatus"
+        Me.cmbStatus.Size = New System.Drawing.Size(157, 21)
+        Me.cmbStatus.TabIndex = 11
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(407, 344)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "&Refresh"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'KamarForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(567, 204)
+        Me.ClientSize = New System.Drawing.Size(491, 372)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cmbStatus)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.cmdBatal)
+        Me.Controls.Add(Me.cmdSimpan)
+        Me.Controls.Add(Me.txtHargaKamar)
+        Me.Controls.Add(Me.txtNamaKamar)
+        Me.Controls.Add(Me.txtNoKamar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -169,13 +202,16 @@ Partial Class KamarForm
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents txtNoKamar As TextBox
+    Friend WithEvents txtNamaKamar As TextBox
+    Friend WithEvents txtHargaKamar As TextBox
+    Friend WithEvents cmdSimpan As Button
+    Friend WithEvents cmdBatal As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtCariKamar As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label5 As Label
+    Friend WithEvents cmbStatus As ComboBox
+    Friend WithEvents Button1 As Button
 End Class
