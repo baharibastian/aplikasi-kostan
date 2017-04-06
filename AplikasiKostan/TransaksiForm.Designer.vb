@@ -32,7 +32,6 @@ Partial Class TransaksiForm
         Me.txtPeriode = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.cTglMasuk = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -46,6 +45,11 @@ Partial Class TransaksiForm
         Me.Label9 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -134,16 +138,9 @@ Partial Class TransaksiForm
         Me.Label6.TabIndex = 9
         Me.Label6.Text = "Total"
         '
-        'txtTotal
-        '
-        Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(120, 116)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(177, 20)
-        Me.txtTotal.TabIndex = 10
-        '
         'cTglMasuk
         '
+        Me.cTglMasuk.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.cTglMasuk.Location = New System.Drawing.Point(120, 142)
         Me.cTglMasuk.Name = "cTglMasuk"
         Me.cTglMasuk.Size = New System.Drawing.Size(177, 20)
@@ -169,6 +166,7 @@ Partial Class TransaksiForm
         '
         'cTglKeluar
         '
+        Me.cTglKeluar.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.cTglKeluar.Location = New System.Drawing.Point(120, 169)
         Me.cTglKeluar.Name = "cTglKeluar"
         Me.cTglKeluar.Size = New System.Drawing.Size(177, 20)
@@ -256,11 +254,61 @@ Partial Class TransaksiForm
         Me.DataGridView1.Size = New System.Drawing.Size(585, 188)
         Me.DataGridView1.TabIndex = 18
         '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(351, 170)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(45, 13)
+        Me.Label11.TabIndex = 19
+        Me.Label11.Text = "Label11"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(351, 183)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(45, 13)
+        Me.Label12.TabIndex = 20
+        Me.Label12.Text = "Label12"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(351, 196)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(45, 13)
+        Me.Label13.TabIndex = 21
+        Me.Label13.Text = "Label13"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(117, 119)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(21, 13)
+        Me.Label14.TabIndex = 22
+        Me.Label14.Text = "Rp"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(135, 119)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(45, 13)
+        Me.Label15.TabIndex = 23
+        Me.Label15.Text = "Label15"
+        '
         'TransaksiForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(613, 433)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmdBatal)
@@ -269,7 +317,6 @@ Partial Class TransaksiForm
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.cTglMasuk)
-        Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtPeriode)
@@ -300,7 +347,6 @@ Partial Class TransaksiForm
     Friend WithEvents txtPeriode As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents txtTotal As TextBox
     Friend WithEvents cTglMasuk As DateTimePicker
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
@@ -314,4 +360,9 @@ Partial Class TransaksiForm
     Friend WithEvents Label9 As Label
     Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
 End Class
