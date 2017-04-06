@@ -1,7 +1,6 @@
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\bin\Debug\AplikasiKostan.exe
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\bin\Debug\AplikasiKostan.pdb
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\bin\Debug\AplikasiKostan.xml
-D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.vbprojResolveAssemblyReference.cache
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.Main.resources
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.Resources.resources
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.vbproj.GenerateResource.Cache
@@ -12,5 +11,4 @@ D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.KamarForm.resources
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.PenghuniForm.resources
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\bin\Debug\AplikasiKostan.exe.config
-D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\bin\Debug\MySql.Data.xml
 D:\Kuliah\Semester 4\Pemrograman Visual\AplikasiKostan\AplikasiKostan\obj\Debug\AplikasiKostan.TransaksiForm.resources
