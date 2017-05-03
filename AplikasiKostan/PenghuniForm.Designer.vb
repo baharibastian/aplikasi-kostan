@@ -189,6 +189,7 @@ Partial Class PenghuniForm
         'cmbJK
         '
         Me.cmbJK.FormattingEnabled = True
+        Me.cmbJK.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
         Me.cmbJK.Location = New System.Drawing.Point(124, 212)
         Me.cmbJK.Name = "cmbJK"
         Me.cmbJK.Size = New System.Drawing.Size(198, 21)
@@ -196,6 +197,7 @@ Partial Class PenghuniForm
         '
         'tglLahir
         '
+        Me.tglLahir.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.tglLahir.Location = New System.Drawing.Point(124, 240)
         Me.tglLahir.Name = "tglLahir"
         Me.tglLahir.Size = New System.Drawing.Size(198, 20)
@@ -310,6 +312,7 @@ Partial Class PenghuniForm
         Me.Controls.Add(Me.Label1)
         Me.MaximizeBox = False
         Me.Name = "PenghuniForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Data Penghuni"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

@@ -51,6 +51,7 @@
         txtNamaKamar.Text = ""
         txtHargaKamar.Text = ""
         cmbStatus.Text = ""
+        txtCariKamar.Text = ""
     End Sub
 
     Sub Check()

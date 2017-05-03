@@ -24,24 +24,18 @@ Partial Class Main
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataKamarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataPenghuniToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataKamarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataKamarToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DataPenghuniToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TransaksiToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UtilityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GantiPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.TransaksiToolStripMenuItem, Me.LaporanToolStripMenuItem, Me.UtilityToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(284, 24)
@@ -50,10 +44,16 @@ Partial Class Main
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKamarToolStripMenuItem, Me.DataPenghuniToolStripMenuItem, Me.ToolStripSeparator1, Me.LogoutToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataPenghuniToolStripMenuItem, Me.DataKamarToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripSeparator1, Me.LogoutToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
+        '
+        'DataPenghuniToolStripMenuItem
+        '
+        Me.DataPenghuniToolStripMenuItem.Name = "DataPenghuniToolStripMenuItem"
+        Me.DataPenghuniToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DataPenghuniToolStripMenuItem.Text = "Data Penghuni"
         '
         'DataKamarToolStripMenuItem
         '
@@ -61,11 +61,11 @@ Partial Class Main
         Me.DataKamarToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.DataKamarToolStripMenuItem.Text = "Data Kamar"
         '
-        'DataPenghuniToolStripMenuItem
+        'ToolStripMenuItem1
         '
-        Me.DataPenghuniToolStripMenuItem.Name = "DataPenghuniToolStripMenuItem"
-        Me.DataPenghuniToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DataPenghuniToolStripMenuItem.Text = "Data Penghuni"
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItem1.Text = "Transaksi"
         '
         'ToolStripSeparator1
         '
@@ -76,51 +76,7 @@ Partial Class Main
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
         Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'TransaksiToolStripMenuItem
-        '
-        Me.TransaksiToolStripMenuItem.Name = "TransaksiToolStripMenuItem"
-        Me.TransaksiToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.TransaksiToolStripMenuItem.Text = "Transaksi"
-        '
-        'LaporanToolStripMenuItem
-        '
-        Me.LaporanToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataKamarToolStripMenuItem1, Me.DataPenghuniToolStripMenuItem1, Me.TransaksiToolStripMenuItem1})
-        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
-        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.LaporanToolStripMenuItem.Text = "&Laporan"
-        '
-        'DataKamarToolStripMenuItem1
-        '
-        Me.DataKamarToolStripMenuItem1.Name = "DataKamarToolStripMenuItem1"
-        Me.DataKamarToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.DataKamarToolStripMenuItem1.Text = "&Data Kamar"
-        '
-        'DataPenghuniToolStripMenuItem1
-        '
-        Me.DataPenghuniToolStripMenuItem1.Name = "DataPenghuniToolStripMenuItem1"
-        Me.DataPenghuniToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.DataPenghuniToolStripMenuItem1.Text = "&Data Penghuni"
-        '
-        'TransaksiToolStripMenuItem1
-        '
-        Me.TransaksiToolStripMenuItem1.Name = "TransaksiToolStripMenuItem1"
-        Me.TransaksiToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.TransaksiToolStripMenuItem1.Text = "&Transaksi"
-        '
-        'UtilityToolStripMenuItem
-        '
-        Me.UtilityToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GantiPasswordToolStripMenuItem})
-        Me.UtilityToolStripMenuItem.Name = "UtilityToolStripMenuItem"
-        Me.UtilityToolStripMenuItem.Size = New System.Drawing.Size(50, 20)
-        Me.UtilityToolStripMenuItem.Text = "&Utility"
-        '
-        'GantiPasswordToolStripMenuItem
-        '
-        Me.GantiPasswordToolStripMenuItem.Name = "GantiPasswordToolStripMenuItem"
-        Me.GantiPasswordToolStripMenuItem.Size = New System.Drawing.Size(155, 22)
-        Me.GantiPasswordToolStripMenuItem.Text = "Ganti &Password"
+        Me.LogoutToolStripMenuItem.Text = "Keluar"
         '
         'Main
         '
@@ -145,11 +101,5 @@ Partial Class Main
     Friend WithEvents DataPenghuniToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents TransaksiToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LaporanToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents DataKamarToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents DataPenghuniToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents TransaksiToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents UtilityToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents GantiPasswordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
 End Class

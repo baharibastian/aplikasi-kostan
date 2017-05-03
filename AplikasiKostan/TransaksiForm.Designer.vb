@@ -39,17 +39,16 @@ Partial Class TransaksiForm
         Me.cmdSimpan = New System.Windows.Forms.Button()
         Me.cmdBatal = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtKeyword = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -192,59 +191,30 @@ Partial Class TransaksiForm
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.Button3)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.txtKeyword)
         Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Location = New System.Drawing.Point(320, 10)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(281, 122)
+        Me.GroupBox1.Size = New System.Drawing.Size(281, 58)
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cari Data Transaksi"
         '
-        'Button3
+        'txtKeyword
         '
-        Me.Button3.Location = New System.Drawing.Point(124, 84)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "&Cari"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(124, 53)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(142, 20)
-        Me.TextBox4.TabIndex = 3
+        Me.txtKeyword.Location = New System.Drawing.Point(124, 23)
+        Me.txtKeyword.Name = "txtKeyword"
+        Me.txtKeyword.Size = New System.Drawing.Size(142, 20)
+        Me.txtKeyword.TabIndex = 3
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(17, 53)
+        Me.Label10.Location = New System.Drawing.Point(17, 26)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(59, 13)
+        Me.Label10.Size = New System.Drawing.Size(81, 13)
         Me.Label10.TabIndex = 2
-        Me.Label10.Text = "Kata Kunci"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(17, 26)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(92, 13)
-        Me.Label9.TabIndex = 1
-        Me.Label9.Text = "Filter Berdasarkan"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(124, 23)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(142, 21)
-        Me.ComboBox3.TabIndex = 0
+        Me.Label10.Text = "Kode Transaksi"
         '
         'DataGridView1
         '
@@ -262,6 +232,7 @@ Partial Class TransaksiForm
         Me.Label11.Size = New System.Drawing.Size(45, 13)
         Me.Label11.TabIndex = 19
         Me.Label11.Text = "Label11"
+        Me.Label11.Visible = False
         '
         'Label12
         '
@@ -271,6 +242,7 @@ Partial Class TransaksiForm
         Me.Label12.Size = New System.Drawing.Size(45, 13)
         Me.Label12.TabIndex = 20
         Me.Label12.Text = "Label12"
+        Me.Label12.Visible = False
         '
         'Label13
         '
@@ -280,6 +252,7 @@ Partial Class TransaksiForm
         Me.Label13.Size = New System.Drawing.Size(45, 13)
         Me.Label13.TabIndex = 21
         Me.Label13.Text = "Label13"
+        Me.Label13.Visible = False
         '
         'Label14
         '
@@ -299,11 +272,33 @@ Partial Class TransaksiForm
         Me.Label15.TabIndex = 23
         Me.Label15.Text = "Label15"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(443, 159)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 24
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(511, 204)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(45, 13)
+        Me.Label16.TabIndex = 25
+        Me.Label16.Text = "Label16"
+        Me.Label16.Visible = False
+        '
         'TransaksiForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(613, 433)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label13)
@@ -328,6 +323,7 @@ Partial Class TransaksiForm
         Me.Controls.Add(Me.txtKodeTransaksi)
         Me.Controls.Add(Me.Label1)
         Me.Name = "TransaksiForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TransaksiForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -354,15 +350,14 @@ Partial Class TransaksiForm
     Friend WithEvents cmdSimpan As Button
     Friend WithEvents cmdBatal As Button
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtKeyword As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents ComboBox3 As ComboBox
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label16 As Label
 End Class
