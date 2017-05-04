@@ -38,9 +38,6 @@ Partial Class TransaksiForm
         Me.cTglKeluar = New System.Windows.Forms.DateTimePicker()
         Me.cmdSimpan = New System.Windows.Forms.Button()
         Me.cmdBatal = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtKeyword = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -49,7 +46,6 @@ Partial Class TransaksiForm
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -189,33 +185,6 @@ Partial Class TransaksiForm
         Me.cmdBatal.Text = "&Batal"
         Me.cmdBatal.UseVisualStyleBackColor = True
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.txtKeyword)
-        Me.GroupBox1.Controls.Add(Me.Label10)
-        Me.GroupBox1.Location = New System.Drawing.Point(320, 10)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(281, 58)
-        Me.GroupBox1.TabIndex = 17
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Cari Data Transaksi"
-        '
-        'txtKeyword
-        '
-        Me.txtKeyword.Location = New System.Drawing.Point(124, 23)
-        Me.txtKeyword.Name = "txtKeyword"
-        Me.txtKeyword.Size = New System.Drawing.Size(142, 20)
-        Me.txtKeyword.TabIndex = 3
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(17, 26)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(81, 13)
-        Me.Label10.TabIndex = 2
-        Me.Label10.Text = "Kode Transaksi"
-        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -305,7 +274,6 @@ Partial Class TransaksiForm
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmdBatal)
         Me.Controls.Add(Me.cmdSimpan)
         Me.Controls.Add(Me.cTglKeluar)
@@ -325,8 +293,6 @@ Partial Class TransaksiForm
         Me.Name = "TransaksiForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "TransaksiForm"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -349,9 +315,6 @@ Partial Class TransaksiForm
     Friend WithEvents cTglKeluar As DateTimePicker
     Friend WithEvents cmdSimpan As Button
     Friend WithEvents cmdBatal As Button
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtKeyword As TextBox
-    Friend WithEvents Label10 As Label
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label

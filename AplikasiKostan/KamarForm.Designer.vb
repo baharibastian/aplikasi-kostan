@@ -37,6 +37,7 @@ Partial Class KamarForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.cmbStatus = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.cmbHapus = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -169,11 +170,22 @@ Partial Class KamarForm
         Me.Button1.Text = "&Refresh"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'cmbHapus
+        '
+        Me.cmbHapus.Location = New System.Drawing.Point(259, 116)
+        Me.cmbHapus.Name = "cmbHapus"
+        Me.cmbHapus.Size = New System.Drawing.Size(75, 23)
+        Me.cmbHapus.TabIndex = 13
+        Me.cmbHapus.Text = "&Hapus"
+        Me.cmbHapus.UseVisualStyleBackColor = True
+        Me.cmbHapus.Visible = False
+        '
         'KamarForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(491, 372)
+        Me.Controls.Add(Me.cmbHapus)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cmbStatus)
         Me.Controls.Add(Me.Label5)
@@ -214,4 +226,5 @@ Partial Class KamarForm
     Friend WithEvents Label5 As Label
     Friend WithEvents cmbStatus As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents cmbHapus As Button
 End Class

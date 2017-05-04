@@ -157,14 +157,6 @@ Public Class TransaksiForm
         KNS.Close()
     End Sub
 
-    Sub Cari()
-        Call KoneksiDB()
-        DS.Clear()
-        STR = "SELECT * FROM transaksi WHERE kode_transaksi = '" & txtKeyword.Text & "'"
-        DA.SelectCommand = New Odbc.OdbcCommand(STR, KNS)
-        DA.Fill(DS, "transaksi")
-    End Sub
-
     Private Sub txtPeriode_TextChanged(sender As Object, e As EventArgs) Handles txtPeriode.TextChanged
         If (txtPeriode.Text = "") Then
             Label15.Text = ""
@@ -182,15 +174,11 @@ Public Class TransaksiForm
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        Cari()
-    End Sub
-
-    Private Sub txtKeyword_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtKeyword.KeyPress
+    Private Sub txtKeyword_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
 
     End Sub
 
-    Private Sub txtKeyword_TextChanged(sender As Object, e As EventArgs) Handles txtKeyword.TextChanged
+    Private Sub txtKeyword_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class

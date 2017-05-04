@@ -17,7 +17,7 @@
         If txtNoKamar.Text = "" Or txtNamaKamar.Text = "" Or txtHargaKamar.Text = "" Or cmbStatus.Text = "" Then
             MsgBox("Data Tidak Boleh Kosong" & vbCrLf & "Silahkan Lengkapi Data Kamar", MsgBoxStyle.Critical)
         Else
-            If cmdSimpan.Text = "Simpan" Then
+            If cmdSimpan.Text = "&Simpan" Then
                 Call Check()
                 If DS.Tables("kamar").Rows.Count <> 0 Then
                     MsgBox("Kamar Sudah Ada")
@@ -34,6 +34,7 @@
                 STR = "Update kamar set nama_kamar='" & txtNamaKamar.Text & "',harga_kamar='" & txtHargaKamar.Text & "',status='" & cmbStatus.Text & "' WHERE kode_kamar = '" & txtNoKamar.Text & "'"
                 DA.InsertCommand = New Odbc.OdbcCommand(STR, KNS)
                 DA.InsertCommand.ExecuteNonQuery()
+                MsgBox("Data Berhasil Diubah", MsgBoxStyle.Information)
                 Call getData()
                 Call Clear()
                 cmdSimpan.Text = "&Simpan"
@@ -44,6 +45,7 @@
 
     Private Sub cmdBatal_Click(sender As Object, e As EventArgs) Handles cmdBatal.Click
         Call Clear()
+        cmdSimpan.Text = "&Simpan"
     End Sub
 
     Sub Clear()
@@ -52,6 +54,8 @@
         txtHargaKamar.Text = ""
         cmbStatus.Text = ""
         txtCariKamar.Text = ""
+        cmdSimpan.Text = "&Simpan"
+        cmbHapus.Visible = False
     End Sub
 
     Sub Check()
@@ -70,6 +74,12 @@
         DA.Fill(DS, "kamar")
     End Sub
 
+    Sub delete()
+        STR = "DELETE FROM kamar WHERE kode_kamar = '" & txtNoKamar.Text & "'"
+        DA.InsertCommand = New Odbc.OdbcCommand(STR, KNS)
+        DA.InsertCommand.ExecuteNonQuery()
+    End Sub
+
     Private Sub txtCariKamar_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtCariKamar.KeyPress
         If Asc(e.KeyChar) = Keys.Enter Then
             Call Cari()
@@ -79,6 +89,7 @@
                 txtHargaKamar.Text = DS.Tables("kamar").Rows(0)(2)
                 cmbStatus.Text = DS.Tables("kamar").Rows(0)(3)
                 cmdSimpan.Text = "Update"
+                cmbHapus.Visible = True
             Else
                 MsgBox("Data Tidak Ditemukan")
             End If
@@ -87,5 +98,14 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Call getData()
+    End Sub
+
+    Private Sub cmbHapus_Click(sender As Object, e As EventArgs) Handles cmbHapus.Click
+        delete()
+        MsgBox("Berhasil Dihapus", MsgBoxStyle.Information)
+        Clear()
+        getData()
+        cmbHapus.Visible = False
+        txtNoKamar.Focus()
     End Sub
 End Class

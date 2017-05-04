@@ -45,10 +45,20 @@ Partial Class PenghuniForm
         Me.cmdSimpan = New System.Windows.Forms.Button()
         Me.cmdBatal = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cmbFilter = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.cmdCari = New System.Windows.Forms.Button()
         Me.txtCariNama = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnHapus = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -229,7 +239,7 @@ Partial Class PenghuniForm
         '
         'cmdBatal
         '
-        Me.cmdBatal.Location = New System.Drawing.Point(206, 363)
+        Me.cmdBatal.Location = New System.Drawing.Point(205, 363)
         Me.cmdBatal.Name = "cmdBatal"
         Me.cmdBatal.Size = New System.Drawing.Size(75, 23)
         Me.cmdBatal.TabIndex = 21
@@ -238,19 +248,39 @@ Partial Class PenghuniForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cmbFilter)
+        Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.cmdCari)
         Me.GroupBox1.Controls.Add(Me.txtCariNama)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Location = New System.Drawing.Point(355, 8)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(285, 88)
+        Me.GroupBox1.Size = New System.Drawing.Size(285, 118)
         Me.GroupBox1.TabIndex = 23
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Cari Data Penghuni"
         '
+        'cmbFilter
+        '
+        Me.cmbFilter.FormattingEnabled = True
+        Me.cmbFilter.Items.AddRange(New Object() {"Nama Penghuni", "Alamat Penghuni"})
+        Me.cmbFilter.Location = New System.Drawing.Point(122, 28)
+        Me.cmbFilter.Name = "cmbFilter"
+        Me.cmbFilter.Size = New System.Drawing.Size(157, 21)
+        Me.cmbFilter.TabIndex = 4
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(9, 31)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(92, 13)
+        Me.Label12.TabIndex = 3
+        Me.Label12.Text = "Filter Berdasarkan"
+        '
         'cmdCari
         '
-        Me.cmdCari.Location = New System.Drawing.Point(122, 49)
+        Me.cmdCari.Location = New System.Drawing.Point(122, 83)
         Me.cmdCari.Name = "cmdCari"
         Me.cmdCari.Size = New System.Drawing.Size(75, 23)
         Me.cmdCari.TabIndex = 2
@@ -259,7 +289,7 @@ Partial Class PenghuniForm
         '
         'txtCariNama
         '
-        Me.txtCariNama.Location = New System.Drawing.Point(122, 23)
+        Me.txtCariNama.Location = New System.Drawing.Point(122, 57)
         Me.txtCariNama.Name = "txtCariNama"
         Me.txtCariNama.Size = New System.Drawing.Size(157, 20)
         Me.txtCariNama.TabIndex = 1
@@ -267,7 +297,7 @@ Partial Class PenghuniForm
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(6, 25)
+        Me.Label11.Location = New System.Drawing.Point(9, 61)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(86, 13)
         Me.Label11.TabIndex = 0
@@ -281,11 +311,100 @@ Partial Class PenghuniForm
         Me.DataGridView1.Size = New System.Drawing.Size(618, 159)
         Me.DataGridView1.TabIndex = 24
         '
+        'btnHapus
+        '
+        Me.btnHapus.Location = New System.Drawing.Point(286, 363)
+        Me.btnHapus.Name = "btnHapus"
+        Me.btnHapus.Size = New System.Drawing.Size(75, 23)
+        Me.btnHapus.TabIndex = 25
+        Me.btnHapus.Text = "&Hapus"
+        Me.btnHapus.UseVisualStyleBackColor = True
+        Me.btnHapus.Visible = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(355, 159)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(43, 13)
+        Me.Label13.TabIndex = 26
+        Me.Label13.Text = "Status :"
+        Me.Label13.Visible = False
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(441, 193)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(45, 13)
+        Me.Label14.TabIndex = 27
+        Me.Label14.Text = "Label14"
+        Me.Label14.Visible = False
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(441, 176)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(45, 13)
+        Me.Label15.TabIndex = 28
+        Me.Label15.Text = "Label15"
+        Me.Label15.Visible = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(440, 159)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(52, 13)
+        Me.Label16.TabIndex = 29
+        Me.Label16.Text = "Label16"
+        Me.Label16.Visible = False
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(463, 176)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(49, 13)
+        Me.Label17.TabIndex = 30
+        Me.Label17.Text = "Hari Lagi"
+        Me.Label17.Visible = False
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(355, 192)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(85, 13)
+        Me.Label18.TabIndex = 31
+        Me.Label18.Text = "Tanggal Keluar :"
+        Me.Label18.Visible = False
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(355, 176)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(33, 13)
+        Me.Label19.TabIndex = 32
+        Me.Label19.Text = "Sisa :"
+        Me.Label19.Visible = False
+        '
         'PenghuniForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(652, 574)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.btnHapus)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmdBatal)
@@ -349,4 +468,14 @@ Partial Class PenghuniForm
     Friend WithEvents txtCariNama As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnHapus As Button
+    Friend WithEvents cmbFilter As ComboBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
 End Class

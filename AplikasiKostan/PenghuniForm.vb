@@ -45,6 +45,8 @@ Public Class PenghuniForm
         txtPekerjaan.Text = ""
         txtAlamatPekerjaan.Text = ""
         txtCariNama.Text = ""
+        cmdSimpan.Text = "&Simpan"
+        btnHapus.Visible = False
     End Sub
 
     Sub Check()
@@ -53,6 +55,12 @@ Public Class PenghuniForm
         STR = "SELECT * FROM penghuni WHERE kode_penghuni= '" & txtKode.Text & "'"
         DA.SelectCommand = New Odbc.OdbcCommand(STR, KNS)
         DA.Fill(DS, "kamar")
+    End Sub
+
+    Sub delete()
+        STR = "DELETE FROM penghuni WHERE kode_penghuni = '" & txtKode.Text & "'"
+        DA.InsertCommand = New Odbc.OdbcCommand(STR, KNS)
+        DA.InsertCommand.ExecuteNonQuery()
     End Sub
 
     Private Sub cmdSimpan_Click(sender As Object, e As EventArgs) Handles cmdSimpan.Click
@@ -77,6 +85,7 @@ Public Class PenghuniForm
                 STR = "Update penghuni set nomor_identitas='" & txtNo.Text & "',nama_penghuni='" & txtNamaLengkap.Text & "',alamat_asal='" & txtAlamatAsal.Text & "',asal_kota='" & txtKota.Text & "',no_telepon='" & txtTelepon.Text & "',jenis_kelamin='" & cmbJK.Text & "',tanggal_lahir='" & tglLahir.Text & "',pekerjaan='" & txtPekerjaan.Text & "',alamat_pekerjaan='" & txtAlamatPekerjaan.Text & "' WHERE kode_penghuni = '" & txtKode.Text & "'"
                 DA.InsertCommand = New Odbc.OdbcCommand(STR, KNS)
                 DA.InsertCommand.ExecuteNonQuery()
+                MsgBox("Data Berhasil Diubah", MsgBoxStyle.Information)
                 Call getData()
                 Call Clear()
                 cmdSimpan.Text = "&Simpan"
@@ -88,7 +97,13 @@ Public Class PenghuniForm
     Sub Cari()
         Call KoneksiDB()
         DS.Clear()
-        STR = "SELECT * FROM penghuni WHERE nama_penghuni LIKE '%" & txtCariNama.Text & "%'"
+        If cmbFilter.Text = "Alamat Penghuni" Then
+            STR = "SELECT * FROM penghuni WHERE alamat_asal LIKE '%" & txtCariNama.Text & "%'"
+        ElseIf cmbFilter.Text = "Nama Penghuni" Then
+            STR = "SELECT * FROM penghuni WHERE nama_penghuni LIKE '%" & txtCariNama.Text & "%'"
+        Else
+            STR = "SELECT * FROM penghuni"
+        End If
         DA.SelectCommand = New Odbc.OdbcCommand(STR, KNS)
         DA.Fill(DS, "penghuni")
     End Sub
@@ -108,9 +123,59 @@ Public Class PenghuniForm
                 txtPekerjaan.Text = DS.Tables("penghuni").Rows(0)(8)
                 txtAlamatPekerjaan.Text = DS.Tables("penghuni").Rows(0)(9)
                 cmdSimpan.Text = "Update"
+                btnHapus.Visible = True
+                getTanggal()
             Else
                 MsgBox("Data Tidak Ditemukan")
+                Clear()
             End If
         End If
+    End Sub
+
+    Sub getTanggal()
+        Dim cd As New OdbcCommand("SELECT * FROM transaksi WHERE kode_penghuni = '" & txtKode.Text & "'", KNS)
+        Dim myReader As OdbcDataReader = cd.ExecuteReader(CommandBehavior.CloseConnection)
+        Dim secondDate As Date
+        myReader.Read()
+        If myReader.HasRows Then
+            Label14.Visible = True
+            Label15.Visible = True
+            Label16.Visible = True
+            Label17.Visible = True
+            Label18.Visible = True
+            Label13.Visible = True
+            Label19.Visible = True
+            Label14.Text = myReader("tanggal_keluar")
+            secondDate = CDate(Label14.Text)
+            If (DateDiff(DateInterval.Day, Now, secondDate) < 0) Then
+                Label16.Text = "Tidak Aktif"
+                Label15.Text = "-"
+            Else
+                Label16.Text = "Aktif"
+                Label15.Text = DateDiff(DateInterval.Day, Now, secondDate)
+            End If
+        Else
+            Label14.Visible = False
+            Label15.Visible = False
+            Label16.Visible = False
+            Label17.Visible = False
+            Label18.Visible = False
+            Label13.Visible = False
+            Label19.Visible = False
+        End If
+    End Sub
+
+    Private Sub btnHapus_Click(sender As Object, e As EventArgs) Handles btnHapus.Click
+        delete()
+        MsgBox("Berhasil Dihapus", MsgBoxStyle.Information)
+        getData()
+        Clear()
+        btnHapus.Visible = False
+        txtNo.Focus()
+    End Sub
+
+    Private Sub cmdBatal_Click(sender As Object, e As EventArgs) Handles cmdBatal.Click
+        Clear()
+        getData()
     End Sub
 End Class
